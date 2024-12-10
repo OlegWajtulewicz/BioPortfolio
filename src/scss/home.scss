@@ -1,0 +1,255 @@
+//====================================================================================================
+.home {
+    background-color: var(--background-color);
+    position: relative;
+
+    &__container {
+        padding-right: var(--container-padding);
+        padding-left: var(--container-padding);
+        max-width: 100%;
+        display: grid;
+        align-items: flex-end;
+        height: calc(var(--vh, 1vh) * 60);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @media (max-width:$mobileSmall){
+            height: calc(var(--vh, 1vh) * 55); 
+        }
+        
+    }
+       
+    &__bg {
+        position: relative;
+        background: linear-gradient(360deg,
+             rgb(24 24 27) 10%, transparent 25%, 
+             rgba(43, 39, 39, 0.712) 5%, transparent 25%, 
+             rgba(10, 0, 0, 0.959) 85%), 
+             url('@img/bbg.png') center center / cover no-repeat;
+        top: -20em;
+        right: 0;
+        left: 0;
+        height: 60vh;
+        height: calc(var(--vh, 1vh) * 60);
+        z-index: 0;
+        @media (max-width:$mobile){
+            top: -8em; 
+        }
+        @media (max-width:$mobileSmall){
+            height: calc(var(--vh, 1vh) * 55); 
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            opacity: 0.3;
+        }
+        &::after{
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 4em;
+            background-color: var(--background-color);
+            bottom: -2em;
+        }
+      //  animation: smoohtScale 20s ease-in-out forwards  infinite;
+    }
+    &__canvas {
+      //  position: absolute;
+        left: var(--container-padding);
+        bottom: var(--container-padding);
+        width: 8em;
+        height: 8em;
+        border-radius:  50%;
+        overflow: hidden;
+        grid-row: 2 / 3;
+        border: .5px solid rgba(var(--color-white-rgb), 0.05);
+        box-shadow: 2px 2px 17px #000;
+        
+        @include adaptiveValue("width", 128, 60 );
+        @include adaptiveValue("height", 128, 60 );
+    }
+    &__canvas-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+        padding: .2em;
+        background-color: conic-gradient(in hsl longer hue from var(--a), hsl(315, 2%, 56%) 0 0);
+        animation: spin 2s linear infinite;
+    }
+    
+    &__text {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        padding-bottom: var(--container-padding);
+        font-family: 'Montserrat' !important;
+        text-transform: uppercase;
+        @include adaptiveValue("gap", 32, 0);
+        @media (max-width: $mobile){
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+    &__text--left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__subtitle,
+    &__subtitle--right,
+    &__subtitle--right1  {
+      //  font-size: calc(var(--title-size)* 1.1);
+        font-weight: 500;
+        @include adaptiveValue("font-size", 132, 36, );
+        @media (max-width:$mobile){
+          //  font-size: calc(var(--title-size) / 1.2); 
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+        width: fit-content;
+      //  justify-self: start;
+        
+        
+    }
+    &__subtitle--right {
+        text-align: right;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        @media (max-width: $mobile) {
+            grid-row: 2 / 3;
+        }
+    }
+    &__subtitle--right1 {
+        text-align: right;
+        grid-column: 2 / 4;
+      //  grid-column: span 3;
+        grid-row: 2 / 3;
+        justify-self: end;
+      //  width: fit-content;
+        margin-left: -20px;
+        @media (max-width: $mobile) {
+            grid-row: 3 / 4;
+        }
+        .span-lines {
+            display: flex;
+            white-space: nowrap;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        position: absolute;
+        bottom: -15vh;
+		line-height: math.div( 135, 130);
+        font-weight: 500;
+        font-family: 'Montserrat' !important;
+        margin-bottom: 0.625rem;
+        width: 100%;
+        filter: drop-shadow(0px 0px 8px rgba(21, 4, 26, 0.733));
+        white-space: nowrap;
+     //   @include adaptiveValue("font-size", 110, 32);
+        &--body {
+            position: relative;
+            display: block;
+            padding: 0 0 .625rem  0;
+
+        }
+    }
+
+    // .promo__btns
+
+    // &__btns {
+    //     text-shadow: 0 0 toRem(10) #f9ffbf;
+    //     transition: all .3s ease 0s;
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     align-items: center;
+    //     gap: toRem(10);
+    // }
+
+
+
+    &__link {
+        text-decoration: none;
+        color: #a0a09d;
+        margin-right: 1.25rem;
+        @include adaptiveValue("font-size", 22, 16);
+        
+
+
+        // &:nth-child(2) {
+        //     margin-right: 0;
+        // }
+        // &:hover {
+        //     color: #f1f1ef;
+        //     transition: all .3s ease 0s;
+        // }
+        // &.main-btn {
+        //     color: rgb(206, 206, 58);
+        //     &:hover {
+        //         color: #f1f1ef;
+        //         transition: all .3s ease 0s;
+        //     }
+        // }
+    }  
+}
+//========================================================================================================================================================
+// .touch body .home__bg {
+//     top: -7em;
+// }
+// animation usef fom GSAP
+@keyframes smoohtScale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+//========================================================================================================================================================
+
+
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+}
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+  
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+@keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+}
+  
+
+

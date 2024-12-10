@@ -1,0 +1,110 @@
+<section data-watch class="contacts" id="contacts" data-scroll-section>
+    <div class="contacts__top">
+         <div class="maps sliding-right_full-sliding animation nth-increment">      
+                    <div id="map" class="ibg">
+                        <img src="@img/map.jpg" alt="map" class="ibg"> 
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2960380.5907087647!2d20.43113751246607!3d52.53875982178864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1680969406492!5m2!1sru!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  -->
+                    <!--     <iframe title="myMap" src="https://snazzymaps.com/embed/479904" style="border:none;"></iframe> -->
+                        <!-- <iframe src="https://snazzymaps.com/embed/610634" width="100%" height="100%" style="border:none;"></iframe> -->
+
+                    </div>
+                </div>       
+    </div>
+    <div class="contacts__lime line-contact">
+        <div class="scroller" data-direction="right" data-speed="slow">
+            <ul class="scroller__inner">
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+              <li>Contact me</li>
+            </ul>
+          </div>
+    </div>
+    <div class="contacts__container" >
+        
+      <div class="contacts__wrapper">
+        
+        <div class="contacts__photo">
+            <div class="title_fz36 contacts__title sliding-left animation nth-increment" >Interested in collaborating with me?</div>
+        <div class="contacts__answer sliding-left animation nth-increment" >I’m always open to discussing product design work or partnership opportunities.</div>
+            <div class="contacts__mail sliding-left animation nth-increment">
+                <div class="border"></div>
+            <div class="icon-Envelope-opened"></div>
+            </div>
+        </div>
+        <div class="contacts__descr">      
+            
+<div class="title_fz24 contacts__subtitle lifting animation nth-increment">Contact me</div>
+            <div class="title__fz14 contacts__text lifting animation nth-increment">In any way convenient for you:</div>
+
+            <div class="contacts__social lifting animation nth-increment">
+                <ul>
+                    <li><a class="contacts__link " href="https://www.facebook.com/aleh.vajtulevich"><i class="icon-Facebook"></i></a></li>
+                    <li><a class="contacts__link " href="https://www.instagram.com/oleg_wajtulewicz"><i class="icon-Instagram"></i></a></li>
+                    <li><a class="contacts__link " href="https://t.me/AlehVaitulevich"><i class="icon-telegram"></i></a></li>
+                </ul>
+            </div>
+
+            <a href="mailto:vaitulevichaleh@gmail.com" 
+                class="title__fz14 contacts__text-bottom post-link lifting animation nth-increment"
+                style="font-size: 18px !important; margin: 5px 0 20px 0 !important;"
+                >
+                vaitulevichaleh@gmail.com
+            </a>
+
+            <div class="title__fz14 contacts__text-bottom lifting animation nth-increment" style="margin-top: 20px;">
+                Or leave your details and I will write to you myself:
+            </div>
+
+            <form data-ajax data-validate data-required data-popup-message="#thanks" method="POST" action="files/sendmail/sendmail.php" enctype="multipart/form-data" class="form">
+                <div class="form-form">
+
+                    <div class="form__item lifting nth-increment animation">
+                        <label for="name" class="form__label"> Name</label>
+                        <input type="text" id="name" name="name"  placeholder="Your name" class="form__input input" required> 
+                    </div> 
+
+                    <div class="form__item lifting nth-increment animation">
+                        <label for="email" class="form__label">Email</label>
+                        <input required id="email" type="email" name="email" placeholder="Your email" class="form__input input " >
+                    </div>
+
+                    <div class="form__item textarea lifting nth-increment animation">
+                        <label for="message" class="form__label">Your message</label>
+                        <textarea id="message" name="message" placeholder="Your message" class="form__input input"></textarea>
+                    </div>
+
+                    <div class="form__file file-form lifting animation nth-increment">
+                        <label class="file-form__item">
+                            <input name="image" type="file" accept=".pdf, .fig, .psd, .skietch" class="file-form__input button-small">
+                             <div class="file-form__button button">Choose File</div> 
+                        </label>
+                         <div class="file-form__name"></div> 
+                    </div>
+
+                    <div class="checkbox-form__body lifting animation nth-increment">
+                        <label class="form__checkbox checkbox-form">
+                            <input data-required="checkbox" data-error="Error" type="checkbox" name="checkbox" class="checkbox-form__input input checkbox__input _req">
+                            <span class="checkbox-form__text icon-Mark">I agree to the processing of personal data</span>
+                            <input type="hidden" id="token" name="token">
+                        </label>
+                        <button class="checkbox-form__button button">Send message</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+      </div>  
+    </div> 
+               
+</section>

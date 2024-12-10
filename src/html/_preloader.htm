@@ -1,0 +1,149 @@
+
+<div  id="fls-preloader">
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<!-- Стилі для прелоадера -->
+	<style>
+		:root {
+			--spinny: 100px;  
+			--circle: calc(var(--spinny) / 30);
+			--background: linear-gradient(45deg, transparent, transparent 40%, #ee55ff);
+		}
+		
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+		
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+		body {
+			height: 100vh;
+			background: #111;
+			overflow: hidden;
+
+			
+			}
+		html{
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+		/* Головний блок */
+		#fls-preloader {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			background: #111;
+			z-index: 10;
+			translate: none;
+			opacity: 0;
+		}
+		.fls-preloader {
+			position: relative; 
+			width: var(--spinny);
+			height: var(--spinny);
+			border-radius: 50%;
+			animation: spinny 1.5s linear infinite;
+			pointer-events: none;
+			z-index: 10;
+		}
+		.fls-preloader::before {
+			content: "";
+			position: absolute;
+			top: calc(var(--spinny) / 30);
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 100;
+			background: #111;
+			border-radius: 50%;
+		}
+		.fls-preloader::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 3;
+			background: var(--background);
+			border-radius: 50%;
+			filter: blur(var(--spinny) / 5);
+			}
+		@keyframes spinny {
+			0% {
+				transform: rotate(0);
+				filter: hue-rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+				filter: hue-rotate(360deg);
+			}
+		}
+		.loading #fls-preloader {
+			transition: opacity 0.5s ease .5s;
+			opacity: 1; /* Показать прелоадер при наличии класса "loading" */
+		}
+
+		.loaded #fls-preloader {
+			transition: opacity 0.5s ease .5s;
+			opacity: 0; /* Скрыть прелоадер при наличии класса "loaded" */
+		}
+		
+	</style>
+	<!-- Скріпт прелоадера -->
+	<script>
+		function preloader() {
+			const preloaderContainer = document.querySelector('#fls-preloader');
+
+			const preloaderTemplate = `<div class="fls-preloader"> </div>`;
+        preloaderContainer.insertAdjacentHTML("beforeend", preloaderTemplate);
+
+		const
+				preloader = document.querySelector('.fls-preloader'),
+				htmlDocument = document.documentElement;
+
+				htmlDocument.classList.add('loading');
+				htmlDocument.classList.add('lock');
+		// Установите время в миллисекундах, через которое прелоадер будет скрыт
+		const hidePreloaderAfter = 3000; // 5 секунд
+
+		window.addEventListener('load', () => {
+        addLoadedClass();
+    	}, hidePreloaderAfter);
+		// Запуск скрытия прелоадера после указанного времени
+        // setTimeout(() => {
+        //     addLoadedClass();
+        // }, hidePreloaderAfter);
+
+		function addLoadedClass() {
+            htmlDocument.classList.add('loaded');
+           	htmlDocument.classList.remove('lock');
+            htmlDocument.classList.remove('loading');
+            setInterval(() => {
+                preloader.remove();
+                preloaderContainer.remove();
+            }, 3000);
+        }
+		//preloaderContainer.remove();
+}
+preloader();
+
+	</script>
+</div>
+
+
+<!-- <div class="fls-preloader__body">
+	<div class="fls-preloader__counter">0%</div>
+	<div class="fls-preloader__line"><span></span></div>
+</div> -->

@@ -1,0 +1,210 @@
+// ===============
+// colors palette
+// ===============
+:root {
+	// Site colors (Кольори сайту):
+	// =================================================================
+	--primary: #f8c235; // Site main color - (Основний колір сайту)
+	--secondary: #94d2bd; // Site secondary color - (Додатковий колір сайту)
+	--accent: #0090c1; // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+	--inverse: #ffff3f; // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+
+	// Background colors (Фонові кольори):
+	// =================================================================
+	--bg-primary: #242423; // BG primary background color - (Основний фоновий колір сайту)
+	--bg-secondary: #1a1001; // BG secondary background color - (Додатковий фоновий колір сайту)
+	--bg-accent: #4cc9f0; // BG accent - наприклад, може бути використаний для встановлення кольору фону для акцентних елементів, таких як кнопки або іконки.
+	--bg-inverse: #2d00f7; // BG inverse - наприклад, може використовуватися для налаштування кольору фону на світлому тексті.
+
+	// Text colors (Текстові кольори):
+	// =================================================================
+	--text-primary: #fbfffe; // Text primary text color - (Основний текстовий колір сайту)
+	--text-secondary: #080708; // Text secondary text color - (Додатковий текстовий колір сайту)
+	--text-accent: #e8eddf; // Text accent - наприклад, може використовуватися для встановлення кольору тексту для акцентних елементів на сторінці, таких як заголовки або кнопки.
+	--text-inverse: #e8eddf; // Text inverse - наприклад, може використовуватися для налаштування кольору тексту на темному фоні.
+	// =================================================================
+   --orange: rgb(255, 145, 0);
+   --blue: rgb(0, 102, 255);
+   --yellow: rgb(251, 255, 0);
+   --violet: rgb(96, 33, 221);
+   --brown: rgb(117, 61, 39);
+   --grey: rgb(68, 62, 62);
+   --blue: rgb(61, 161, 255);
+   --red: #B72025;
+   --pink: #891951;
+   --cyan: #0D6064;
+   --teal: #0C4E42;
+   --green: #1C6031;
+   --orange6: #E65425;
+   --graphite: #253238;
+
+   --aspect-ratio: 56.24%;
+}
+:root {
+    --background-color: #18181B;
+    --text-color: #A1A1AA;
+
+
+    --background-gradient: linear-gradient(315deg, #333232 25%, #2b2626 40%, #201e1e 50%, #1f1d1d 65%, #1f1f1f 80%, #1f1f1f);
+  
+    --card-background-color: rgba(255, 255, 255, .015);
+    --card-border-color: rgba(255, 255, 255, 0.1);
+    --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+    --card-box-shadow-1-y: 3px;
+    --card-box-shadow-1-blur: 6px;
+    --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+    --card-box-shadow-2-y: 8px;
+    --card-box-shadow-2-blur: 15px;
+    --card-label-color: #FFFFFF;
+    --card-icon-color: #D4D4D8;
+    --card-icon-background-color: rgba(255, 255, 255, 0.08);
+    --card-icon-border-color: rgba(255, 255, 255, 0.12);
+    --card-shine-opacity: .1;
+    --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(89, 35, 189, 0) 0deg, #632ac0 25deg, rgba(113, 52, 211, 0.18) 295deg, rgba(104, 46, 197, 0) 360deg);
+    --card-line-color: #2A2B2C;
+    --card-tile-color: rgba(97, 52, 201, 0.05);
+  
+    --card-hover-border-color: rgba(255, 255, 255, 0.377);
+    --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+    --card-hover-box-shadow-1-y: 5px;
+    --card-hover-box-shadow-1-blur: 10px;
+    --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+    --card-hover-box-shadow-2-y: 15px;
+    --card-hover-box-shadow-2-blur: 25px;
+    --card-hover-icon-color: #9934d3;
+    --card-hover-icon-background-color: rgba(131, 36, 209, 0.1);
+    --card-hover-icon-border-color: rgba(184, 52, 211, 0.2);
+  
+    --blur-opacity: .01;
+  
+    &.light {
+      --background-color: #FAFAFA;
+      --text-color: #52525B;
+  
+      --card-background-color: transparent;
+      --card-border-color: rgba(24, 24, 27, 0.08);
+      --card-box-shadow-1: rgba(24, 24, 27, 0.02);
+      --card-box-shadow-1-y: 3px;
+      --card-box-shadow-1-blur: 6px;
+      --card-box-shadow-2: rgba(24, 24, 27, 0.04);
+      --card-box-shadow-2-y: 2px;
+      --card-box-shadow-2-blur: 7px;
+      --card-label-color: #18181B;
+      --card-icon-color: #18181B;
+      --card-icon-background-color: rgba(24, 24, 27, 0.04);
+      --card-icon-border-color: rgba(24, 24, 27, 0.1);
+      --card-shine-opacity: .3;
+      --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(75, 16, 185, 0) 0deg, #5110b9 25deg, rgba(113, 52, 211, 0.18) 295deg, rgba(81, 16, 185, 0) 360deg);
+      --card-line-color: #E9E9E7;
+      --card-tile-color: rgba(67, 16, 185, 0.05);
+  
+      --card-hover-border-color: rgba(24, 24, 27, 0.15);
+      --card-hover-box-shadow-1: rgba(24, 24, 27, 0.05);
+      --card-hover-box-shadow-1-y: 3px;
+      --card-hover-box-shadow-1-blur: 6px;
+      --card-hover-box-shadow-2: rgba(24, 24, 27, 0.1);
+      --card-hover-box-shadow-2-y: 8px;
+      --card-hover-box-shadow-2-blur: 15px;
+      --card-hover-icon-color: #18181B;
+      --card-hover-icon-background-color: rgba(131, 36, 209, 0.1);
+      --card-hover-icon-border-color: rgba(184, 52, 211, 0.2);
+  
+      --blur-opacity: .1;
+    }
+  
+    &.toggle .grid * {
+      transition-duration: 0s !important;
+    }
+
+/* ------------------------- Variables -------------------------------------------------- */
+   --vh: 1svh;
+   --color-dark-rgb: 28, 29, 36;
+   --color-dark: rgba(var(--color-dark-rgb), 1);
+   --color-dark-tint: #22232B;
+
+   --bgColor-dark: rgba(var(--bgColor-dark-rgb), 1);
+   --bgColor-dark-rgb: 24, 24, 26;
+
+   --accent-color-rgb: 195, 0, 255; 
+   --accent-color: rgba(var(--accent-color-rgb), 1);
+
+   --color-light-rgb: 247, 247, 255;
+   --color-light: rgba(var(--color-light-rgb), 1);
+   --color-light-tint: #EFEFFF;
+
+   --color-white-rgb: 255, 255, 255;
+   --color-white: rgba(var(--color-white-rgb), 1);
+
+   --color-black-rgb: 0, 0, 0;
+   --color-black: rgba(var(--color-black-rgb), 1);
+
+   --color-primary-rgb: 179, 178, 251;
+   --color-primary: rgba(var(--color-primary-rgb), 1);
+
+   --color-secondary-rgb: 194, 65, 233;
+   --color-secondary: rgba(var(--color-secondary-rgb), 0.45);
+
+   --color-glow-rgb: 153, 121, 255;
+   --color-glow: rgba(var(--color-glow-rgb), 1);
+
+   --color-beige-rgb: 254, 249, 240;
+   --color-beige: rgba(var(--color-beige-rgb), 1);
+
+   --color-gray: #C7BFB2;
+   --color-lightgray: var(--color-light-tint);
+
+   --color-border: rgba(var(--color-dark-rgb), 0.35);
+   --color-border-light: rgba(var(--color-white-rgb), 0.25);
+   --color-text: rgba(var(--color-dark-rgb), 0.75);
+   --color-text-light: rgba(var(--color-white-rgb), 0.75);
+
+   --color-alert-error: #dc122d;
+   --color-alert-success: #46d054;
+
+   // --animation-primary: 0.4s cubic-bezier(.85, 0, .15, 1);
+   --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
+   --animation-fast: 0.4s cubic-bezier(0.62, 0.05, 0.01, 0.99);
+   --animation-smooth: 0.5s cubic-bezier(1, 0, .25, 1);
+   --animation-thumb: 0.4s cubic-bezier(0.5, 0, .25, 1);
+   --animation-theme: 0.3s ease-in-out;
+   --animation-nav-smooth: 0.5s cubic-bezier(.5, 0, .25, 1);
+   --animation-cursor: 0.4s cubic-bezier(0.5, 0, .25, 1);
+   --animation-bounce: 0.4s cubic-bezier(0.35, 1.5, 0.6, 1);
+   --animation-bounce-smooth: 0.6s cubic-bezier(0.5, 1.5, 0.5, 1);
+
+   --section-padding: var(--title-size);
+   --container-padding: calc(var(--col-gap) * 1.5);
+   --gap-padding: min(4vw, 4em);
+   --gap-padding-1: clamp(1.5em, 4vw, 2.5em);
+
+ //  --container-padding: min(4vw, 4em);
+  // --container-padding: min(6vw, 6em);
+
+   --row-gap: calc(var(--title-size) * 0.3);
+   --col-gap: calc(var(--title-size) * 0.3);
+   --col-gap-small: calc(var(--title-size) * 0.1);
+
+   --title-size: clamp(5em, 7.5vw, 7.5em);
+
+   --border-radius: calc(var(--btn-height) * 0.5);
+
+   --btn-height: 2.6em;
+   --nav-bar-height: calc(var(--btn-height) + (var(--row-gap) * 2));
+}
+
+[data-theme-section="dark"] {
+   --color-border: rgba(var(--color-white-rgb), 0.45);
+   --color-text: rgba(var(--color-white-rgb), 0.75);
+}
+
+@media screen and (max-width: 1024px) {
+   :root {
+      --container-padding: clamp(1.25em, 4vw, 2.5em);
+   }
+}
+
+@media screen and (max-width: 860px) {
+   :root {
+      --nav-bar-height: calc(var(--btn-height) + (var(--container-padding) * 2));
+   } 
+}

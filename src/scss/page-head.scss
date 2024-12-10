@@ -1,0 +1,26 @@
+.page-head {
+    .home__bg {  
+        background: linear-gradient(360deg, rgb(24, 24, 27) 10%, transparent 25%, rgba(43, 39, 39, 0.712) 5%, transparent 25%, rgba(10, 0, 0, 0.959) 85%);
+        height: unset;
+    }
+    .home__container {
+        height: unset;
+        position: relative;
+        display: flex;
+    }
+    .home__text  {
+        display: flex;
+        padding-top: calc(var(--section-padding)* 1.33);
+        padding-bottom: calc(var(--section-padding)* .66);
+        text-transform: none;
+        @media (max-width:$mobileSmall){
+            padding-top: calc(var(--section-padding)* .33); 
+        }
+    }
+    .home__subtitle {
+        letter-spacing: .02em;
+    }
+    .line {
+        box-shadow: 0px -12px 17px 4px rgb(16 16 16 / 62%);
+    }
+}

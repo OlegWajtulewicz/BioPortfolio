@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"Home • Aleh Vaitulevich • Freelance Developer"
+	})
+	<body data-barba="wrapper">
+		<div class="noise"></div>
+		@@include('html/_transition.htm',{})
+		<div class="wrapper" data-barba="container" data-barba-namespace="home">
+			<div class="main-wrap" data-scroll-container>
+				@@include('html/_header.htm',{})
+				<main class="page">
+					@@include('html/_mouse.htm',{})
+					<div class="menu__overlay"></div>
+					<div class="menu__fixed"></div>
+					<div class="hamburger-wrap  not-active" >
+						<button type="button" class="hamburger magnetic" data-strength="50" data-strength-text="30">
+							<div class="btn__bg"></div>
+								<span class="btn__text">
+									<p class="btn-text-p change">Menu</p>
+								</span>
+								<div class="btn__border"></div>
+						</button>
+					</div>
+					<section class="home" data-scroll-section>
+						<div class="home__bg" data-scroll data-scroll-speed="-4.5" ></div>
+						<div class="home__container overlay">
+							<div class="home__text" data-scroll data-scroll-speed="-3" data-scroll-position="top"> 
+								<div class="span-lines animate">
+									<h1 data-value="UI/UX Design" class=" home__subtitle text-effect">Creative </h1>
+								</div>
+								<div class="home__canvas">
+									<div class="home__canvas-wrap" id="myCanvas"></div>
+								</div>
+								<h1 class="home__subtitle--right" data-scroll data-scroll-speed="-2" data-scroll-position="top"> 
+									<div class="span-lines animate">web </div> 
+								</h1>
+								<h1 class="home__subtitle--right1" >  
+									<div class="span-lines animate" data-scroll data-scroll-speed="-2" data-scroll-position="top">
+										Development
+									</div>
+								 </h1>
+							</div>
+						</div>
+						<div class="line line-main">
+							<div class="line-shadow"></div>
+						</div>
+					</section>
+					@@include('html/_marquee-1.htm',{})
+					@@include('html/_about.htm',{}) 
+					@@include('html/_latest-work.htm',{}) 
+					<section class="all-works" data-scroll-section>
+						<div class="all-works__container">
+							<a href="./work.html" class="all-works__btn btn magnetic" data-btn-hover data-strength="70" data-strength-text="40">
+								<div class="btn__bg"></div>
+								<div class="btn__circle-wrap">
+									<div class="btn__circle">
+										<div class="before__100"></div>
+									</div>
+								</div>
+								<span class="btn__text">
+									<p class="btn-text-p change">All works</p>
+								</span>
+								<div class="btn__border"></div>
+							</a>
+						</div>
+						<div class="line">
+						</div>
+					</section>
+				</main>
+				@@include('html/_footer.htm',{})
+			</div>
+		</div>
+		@@include('html/_morphingBall.htm',{})
+		<script src="https://www.google.com/recaptcha/api.js?render=6Ld6ODIoAAAAAOrQw7DmQfRh3ceBcMwDya_F38xH"></script>
+		<script src="https://unpkg.com/split-type"></script>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
