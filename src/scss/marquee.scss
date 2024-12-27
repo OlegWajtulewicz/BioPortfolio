@@ -136,24 +136,6 @@
     z-index: 3;
 }
 
-/* ------------------------- Section - techer Marquee -------------------------------------------------- */
-
-.section-techer-marquee {
-    &.section  {
-          position: relative;  
-          padding-top: calc(var(--section-padding) * 1.5);
-          padding-bottom: 0;
-    }
-    .gradient-circle-wrap .gradient-circle {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(1, 0.75);
-        opacity: 0.2;
-        z-index: 0;
-    }
-}
-
 
 
 

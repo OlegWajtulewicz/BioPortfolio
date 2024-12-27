@@ -14,7 +14,7 @@
 			display: flex;
 			height: 100%;
 			width: 100%;
-			background: var(--color-dark);
+		//	background: var(--color-dark);
 			z-index: 100;
 			transform: translate(calc(100% + 6vw), 0) rotate(0.001deg);
 			transition: transform .8s cubic-bezier(.7, 0, .2, 1);

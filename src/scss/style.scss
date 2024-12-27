@@ -79,6 +79,7 @@ body {
 	background-color: var(--background-color);
 	-webkit-font-smoothing: antialiased;
 	pointer-events: none;
+	padding-right: 0 !important;
 	// Скролл заблоковано
 	//overflow: hidden;
 	.lock & {
@@ -261,7 +262,7 @@ body {
 	position: fixed;
 	pointer-events: none;
 	&::before{
-		content:'';
+	//	content:'';
 		position: absolute;
 		top: -10rem;
 		left: -10rem;

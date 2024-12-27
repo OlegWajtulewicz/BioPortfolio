@@ -431,7 +431,6 @@ function delay(n) {
 	});
 }
 //========================================================================================================================================================
-
 /**
 * Active menu item
 */
@@ -570,7 +569,7 @@ function initCheckScrollUpDown() {
 
 function initScript() {
   getHash();
-  initWindowInnerheight();
+//  initWindowInnerheight();
   initCheckTouchDevice();
   initHamburgerNav();
   initMagneticButtons();
@@ -607,11 +606,6 @@ function initTricksWords() {
   }
 }  
 
-document.addEventListener('load', function() {
- // initSpanLinesAnimation();
- // initTricksWords();
-});
-
 function initSpanLinesAnimation() {
   document.querySelectorAll('.span-lines.animate').forEach(function(triggerElement) {
     let targetElements = triggerElement.querySelectorAll('.span-line-inner');
@@ -637,6 +631,11 @@ function initSpanLinesAnimation() {
     }
   });
 }
+
+document.addEventListener('load', function() {
+  // initSpanLinesAnimation();
+  // initTricksWords();
+ });
 
 /**
 * Check touch device
@@ -982,19 +981,19 @@ $(document).ready(function() {
 /**
 * Window Inner Height Check
 */
-function initWindowInnerheight() {
+//function initWindowInnerheight() {
     
   // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-  $(document).ready(function(){
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    $('.hamburger, .menu').click(function(){
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-  });
+//  $(document).ready(function(){
+//    let vh = window.innerHeight * 0.01;
+//    document.documentElement.style.setProperty('--vh', `${vh}px`);
+//    $('.hamburger, .menu').click(function(){
+//      let vh = window.innerHeight * 0.01;
+//      document.documentElement.style.setProperty('--vh', `${vh}px`);
+//    });
+//  });
 
-}
+//}
 /**
 /* Marquee on Scroll
 */
